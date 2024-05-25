@@ -1,0 +1,831 @@
+{
+	"info": {
+		"_postman_id": "eac9bbe0-776d-4d3b-8401-da58e40a45f0",
+		"name": "barberia",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34485944",
+		"_collection_link": "https://freddy-1744.postman.co/workspace/freddy-Workspace~c53935f0-66ef-427e-88e9-a26d1bcca26e/collection/34485944-eac9bbe0-776d-4d3b-8401-da58e40a45f0?action=share&source=collection_link&creator=34485944"
+	},
+	"item": [
+		{
+			"name": "tipo_usuario",
+			"item": [
+				{
+					"name": "listar",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\":\"admin\",\r\n    \"descripcion\":\"administrador del sistema\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:400/tipo-usuario/listar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "400",
+							"path": [
+								"tipo-usuario",
+								"listar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "crear",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\":\"admin\",\r\n    \"descripcion\":\"administrador del sistema\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:400/tipo-usuario/crear",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "400",
+							"path": [
+								"tipo-usuario",
+								"crear"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "buscar por id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:400/tipo-usuario/buscar-id/7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "400",
+							"path": [
+								"tipo-usuario",
+								"buscar-id",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actualizar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 8,\r\n    \"nombre\": \"Colaborador\",\r\n    \"descripcion\": \"personal o empleados de la barberia\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:400/tipo-usuario/actualizar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "400",
+							"path": [
+								"tipo-usuario",
+								"actualizar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "eliminar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:400/tipo-usuario/eliminar/10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "400",
+							"path": [
+								"tipo-usuario",
+								"eliminar",
+								"10"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "usuario",
+			"item": [
+				{
+					"name": "crear",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"correoElectronico\":\"gaby12311@gmail.com\",\r\n    \"nombre\":\"gabriela\",\r\n    \"telefono\":\"3188564725\",\r\n    \"idTipoUsuario\":8,\r\n    \"fechaNacimiento\":\"2017-10-15\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:400/usuario/crear",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "400",
+							"path": [
+								"usuario",
+								"crear"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:400/usuario/listar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "400",
+							"path": [
+								"usuario",
+								"listar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "buscar por id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:400/usuario/buscar-id/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "400",
+							"path": [
+								"usuario",
+								"buscar-id",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"correoElectronico\":\"abaejhdfah@gmail.com\",\r\n    \"clave\":\"12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:400/usuario/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "400",
+							"path": [
+								"usuario",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actualizar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"correoElectronico\":\"gaby12311@gmail.com\",\r\n    \"nombre\":\"gaby\",\r\n    \"telefono\":\"3225554782\",\r\n    \"idTipoUsuario\":8,\r\n    \"fechaNacimiento\":\"2017-10-15\",\r\n    \"clave\":\"789654*\",\r\n    \"id\":3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:400/usuario/actualizar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "400",
+							"path": [
+								"usuario",
+								"actualizar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "eliminar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:400/usuario/eliminar/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "400",
+							"path": [
+								"usuario",
+								"eliminar",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "servicios",
+			"item": [
+				{
+					"name": "crear",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\":\"corte hombre\",\r\n    \"precio\":14000,\r\n    \"descripcion\":\"corte basico para hombre\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:400/servicios/crear",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "400",
+							"path": [
+								"servicios",
+								"crear"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:400/servicios/listar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "400",
+							"path": [
+								"servicios",
+								"listar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "buscar por id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:400/servicios/buscar-id/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "400",
+							"path": [
+								"servicios",
+								"buscar-id",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actualizar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idServicios\":1,\r\n    \"nombre\":\"corte caballero\",\r\n    \"precio\":12000,\r\n    \"descripcion\":\"corte normal\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:400/servicios/actualizar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "400",
+							"path": [
+								"servicios",
+								"actualizar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "eliminar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:400/servicios/eliminar/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "400",
+							"path": [
+								"servicios",
+								"eliminar",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "agenda",
+			"item": [
+				{
+					"name": "crear",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fecha\":\"2024-05-26\",\r\n    \"idColaborador\":3,\r\n    \"reservada\":false,\r\n    \"hora\":\"3:00 pm\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:400/agenda/crear",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "400",
+							"path": [
+								"agenda",
+								"crear"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listar",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:400/agenda/listar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "400",
+							"path": [
+								"agenda",
+								"listar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "buscar por id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:400/agenda/buscar-id/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "400",
+							"path": [
+								"agenda",
+								"buscar-id",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actualizar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idAgenda\":1,\r\n    \"fecha\":\"2024-06-02\",\r\n    \"idColaborador\":3,\r\n    \"reservada\":0,\r\n    \"hora\":\"2:30\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:400/agenda/actualizar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "400",
+							"path": [
+								"agenda",
+								"actualizar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "eliminar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:400/agenda/eliminar/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "400",
+							"path": [
+								"agenda",
+								"eliminar",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listar_por_colaborador",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:400/agenda/listar_por_colaborador/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "400",
+							"path": [
+								"agenda",
+								"listar_por_colaborador",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listar_por_colaborador_ocupada",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:400/agenda/listar_por_colaborador_ocupada/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "400",
+							"path": [
+								"agenda",
+								"listar_por_colaborador_ocupada",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actualizar_reserva",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idAgenda\":5,\r\n    \"reservada\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:400/agenda/actualizar_reserva",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "400",
+							"path": [
+								"agenda",
+								"actualizar_reserva"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "validar agenda",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fecha\":\"2024-06-02\",\r\n    \"hora\":\"14:30\",\r\n    \"idColaborador\":3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:400/agenda/validar_agenda",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "400",
+							"path": [
+								"agenda",
+								"validar_agenda"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "reservas",
+			"item": [
+				{
+					"name": "crear",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idUsuario\":3,\r\n    \"idAgenda\":1,\r\n    \"idServicios\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:400/reservas/crear",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "400",
+							"path": [
+								"reservas",
+								"crear"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:400/reservas/listar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "400",
+							"path": [
+								"reservas",
+								"listar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "buscar por id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:400/reservas/buscar-id/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "400",
+							"path": [
+								"reservas",
+								"buscar-id",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actualizar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idReservas\":1,\r\n    \"idUsuario\":2,\r\n    \"idAgenda\":1,\r\n    \"idServicios\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:400/reservas/actualizar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "400",
+							"path": [
+								"reservas",
+								"actualizar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "eliminar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idReservas\":1,\r\n    \"idUsuario\":2,\r\n    \"idAgenda\":1,\r\n    \"idServicios\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:400/reservas/eliminar/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "400",
+							"path": [
+								"reservas",
+								"eliminar",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
